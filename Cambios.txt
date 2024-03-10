@@ -1,0 +1,50 @@
+RIO v1
+7/12/203
+- Se agrego el ESTADO ABIERTO o CERRADO del padrón en "padron.php" para que los usuarios puedan cargar los datos de los patinadores.
+- Se creó la tabla MySQL: "estadopadron" con los siguientes campos:
+	ID: incremental
+	estado: VARCHAN 100
+- Se agregó en el archivo API padron.php en caso 6, que registra el estado del padrón en ABIERTO o CERRADO.
+- Se configuró para que los datos ingresados se in ingresen con la primer letra en Mayuscula en los API: tecnicos - club - padron
+- Se creo la API "estado_padron.php" para reguistrar en la tabla "estadopadron" el estado ABIERTO o CERRADO
+- EN el archivo user_padron.php" se muestra el estado del padrón ABIERTO o CERRADO y muestra o no las opciones para poder: Ver datos - Modificar - Borrar - Agregar
+- En modifico la opción 7 de archivado de buena fe: Se corriguió que si no hay torneos para archivar la opción "archivar todos" no funcione
+
+9/12/2023
+Tablas SQL
+- tecnicos: se agrego los campos:
+	- CUIT1 - CUIT2 - CUIT3
+	- Teléfono
+- clubs: se agrego los campos:
+	- telefono
+	- email
+	- web
+- delegados: se creo la tabala
+- usuarios: se agregó el campo "tipo" para saber si el usuario esta BLOQUEADO o DESBLOQUEADO
+
+PHP
+- USUARIOS: se eliminaron algunos campos del formulario
+- INDEX: se creo el condicional para verificar si el usuario esta BLOQUEADO o DESBLOQUEADO
+- INSTITUCION: 
+	- Se agregaron los inputs: telefono - emial - web
+	- Se agrego el modal "modalRegistro"
+	- se agregó las funiones: consultarDatosClub - consultarDatosTecnicos - consultarDatosDelegados
+- TECNICOS: se agregaron los siguientes imputs:
+	- Institucion 1/2 y 3 en los modales.
+
+- Modulos: MENU y MENU_TABLAS: se agregí el link a DELEGADOS
+- DELEGADOS: nuevo archivo PHP
+
+JS
+- ELIMINARBYID y ELIMINARTODO: Se agrego la opción delegados en las URL
+
+API
+- CLUBS:
+	- se agrego los campor a las consultas SQL: telefono - emial - y wen en los CASE 2 y 4
+	- Se agregó el CASE 6
+- TECNICOS: se agregó el campo "institucion1/2/3" en los CASE 0/2/4
+- DELEGADOS: nuevo archivo
+
+
+
+
